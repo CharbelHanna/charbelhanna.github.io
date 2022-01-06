@@ -28,7 +28,7 @@ twitter_username: CharbelH
 github_username:  charbelhanna
 
 # Build settings
-remote_theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
