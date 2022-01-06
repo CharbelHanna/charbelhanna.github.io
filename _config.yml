@@ -18,17 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Zerohoursleep
+title: Zero hour sleep
 email: charbel_hanna@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   open your eyes!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: CharbelH
+twitter_username: Charbelh
 github_username:  charbelhanna
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
