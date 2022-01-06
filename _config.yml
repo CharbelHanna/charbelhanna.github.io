@@ -28,7 +28,7 @@ twitter_username: CharbelH
 github_username:  charbelhanna
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
