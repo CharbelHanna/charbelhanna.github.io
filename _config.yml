@@ -46,7 +46,7 @@ defaults:
       type: posts
     values:
       show_date: true
-teaser: assests/images/7.jpg
+teaser: /assests/images/7.jpg
 
 # Exclude from processing.
 # The following items will not be processed, by default.
