@@ -29,13 +29,24 @@ twitter_username: Charbelh
 github_username:  charbelhanna
 
 # Build settings
+# theme settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache 
+
+# set post defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+teaser: assests/images/7.jpg
 
 # Exclude from processing.
 # The following items will not be processed, by default.
