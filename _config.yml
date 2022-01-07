@@ -45,8 +45,20 @@ defaults:
       path: ""
       type: posts
     values:
+      layout: single
       show_date: true
-teaser: /assests/images/7.jpg
+      read_time: true
+      comments: true
+ # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+
+logo: "assets/images/zhs-bigger.jpg"
+teaser: assets/images/7.jpg
+masthead_title: "Open your eyes!"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

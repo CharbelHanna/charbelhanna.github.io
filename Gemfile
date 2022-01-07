@@ -19,6 +19,7 @@ gem "jekyll-remote-theme" , "~> 0.4.3"
 group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-paginate"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
