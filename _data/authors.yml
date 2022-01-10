@@ -1,15 +1,15 @@
 #/_data/authors.yml
-Charbel Hanna:
+komo:
   name        : "Charbel Hanna"
-  bio         : "Experienced Cloud Architect in a serious relationship with the cloud. With a demonstrated history of working in the Information Technology and Services industry Developing and Managing delivery of Network Infrastructure and solutions. Highly Skilled in Azure cloud platform, Iaas, Saas, PaaS, ITIL, Data platform. Microsoft Certified Solution Architect Expert, AZURE MCSA, MCITP, MCT, MCTS,"
+  bio         : "Experienced Cloud Architect in a serious relationship with the cloud."
   avatar      : "assets/images/avatar.jpg"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "charbel_hanna@hotmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://zerohoursleep.net"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/hannacharbel/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/charbelh"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram/charbekhanna"  

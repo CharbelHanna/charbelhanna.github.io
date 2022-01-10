@@ -1,7 +1,10 @@
 main:
+  - title: "HOME"
+    url: /
   - title: "ABOUT"
     url: /about/
-  - title: "CONTACT"
-    url: /year-archive/
+  - title: "SEARCH"
+    url: /search/
+
   
   

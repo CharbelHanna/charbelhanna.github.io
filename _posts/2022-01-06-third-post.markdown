@@ -1,12 +1,10 @@
 ---
-title:  "Frist Post"
+title:  "second post"
 categories: jekyll update
 author_profile: true
-author: komo
 layout: single
 classes: wide
 excerpt: "this is a post with an overlay image"
-share: true
 
 header:
   teaser: /assets/images/7.jpg
