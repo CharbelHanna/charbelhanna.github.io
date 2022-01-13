@@ -10,7 +10,7 @@ author: komo
 classes: wide
 header:
   show_overlay_excerpt: true
-  #overlay_image: /assets/images/7.jpg
+  overlay_image: /assets/images/7.jpg
   overlay_filter: 0.5
   feature_image: true
 related: true

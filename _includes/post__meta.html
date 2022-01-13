@@ -1,0 +1,40 @@
+
+ {% assign post_read_time = {{include.post_read_time}} %}
+ {% assign post_show_date = {{include.post_show_date}} %}
+ {% assign post_date = {{include.post_date}} %}
+ {% assign post_words_per_minute = {{include.post_words_per_minute}} %}
+ {% assign post_content = {{include.post_content}} %} 
+{% if post_read_time or post_show_date %}
+
+  <p class="page__meta">
+    {% if post_show_date and post_date %}
+      {% assign date = post_date %}
+      <span class="page__meta-date">
+        <i class="far {% if include.type == 'grid' and post_read_time and post_show_date %}fa-fw {% endif %}fa-calendar-alt" aria-hidden="true"></i>
+        {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+        <time datetime="{{ date | date_to_xmlschema }}">{{ date | date: date_format }}</time>
+      </span>
+    {% endif %}
+    {% if post_read_time and post_show_date %}<span class="page__meta-sep"></span>{% endif %}
+    {% if post_read_time %}
+      {% assign words_per_minute = post_words_per_minute | default: site.words_per_minute | default: 200 %}
+      {% assign words = post_content | strip_html | number_of_words %}
+      <span class="page__meta-readtime">
+        <i class="far {% if include.type == 'grid' and post_read_time and post_show_date %}fa-fw {% endif %}fa-clock" aria-hidden="true"></i>
+        {% if words < words_per_minute %}
+         
+          {{ site.data.ui-text[site.locale].less_than | default: "less than" }} 1 {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
+        
+        {% elsif words == words_per_minute %}
+        
+          1 {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
+          
+        {% else %}
+          {{ words | divided_by: words_per_minute }} {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
+        {% endif %}
+      </span>
+    {% endif %}
+   
+  </p>
+{% endif %}
+

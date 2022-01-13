@@ -1,11 +1,43 @@
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image}
-  {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
-{% endif %}
 {% if page.header.feature_image %}
-  {% for Post in site.posts limit:1}
-    {% if post.header.teaser}
-      {% capture overlay_img_path %} {{post.header.teaser | relative_url }}{% endcapture %}
-     {% endfor %} 
+  {% for post in site.posts limit:1 %}
+
+    {% if post.header.teaser %}
+      {% capture overlay_img_path %} {{ post.header.teaser | relative_url }}{% endcapture %}
+    {% endif %}
+
+    {% if post.excerpt %}
+      {% assign post_excerpt = post.excerpt %}
+    {% endif %}
+
+    {% if post.id %}
+     {% assign post_title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+    {% else %}
+     {% assign post_title = post.title %}
+    {% endif %}
+
+  {% if post.link %}
+    {% assign post_link = post.link %} 
+  {% else %}
+  {% assign post_link = post.url %} 
+   {% endif %}
+
+  {% if post.words_per_minute %}
+    {% assign recent_post_words_per_minute = post.words_per_minute %}
+  {% endif %}
+
+    {% assign recent_post_read_time= post.read_time %}
+    {% assign recent_post_show_date= post.show_date %}
+    {% assign recent_post_date= post.date %}
+    {% assign recent_post_content= post.content %} 
+    {% assign words = recent_post_content | strip_html | number_of_words %}
+
+{% endfor %}
+
+{% elsif page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
+
+{% endif %}
+
 {% if page.header.overlay_filter contains "gradient" %}
   {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
 {% elsif page.header.overlay_filter contains "rgba" %}
@@ -16,7 +48,6 @@
   {% capture overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}){% endcapture %}
 {% endif %}
 
-
 {% if page.header.image_description %}
   {% assign image_description = page.header.image_description %}
 {% else %}
@@ -26,9 +57,34 @@
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
 
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image or page.header.feature_image %}--overlay{% endif %}"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %}{% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
-  {% if page.header.overlay_color or page.header.overlay_image %}
+
+{% if page.header.feature_image %}
+<div class="wrapper">
+  <h1 id="page-title" class="page__title" itemprop="headline">
+    {% if paginator and site.paginate_show_page_num %}
+      {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
+    {% else %}
+      {{ post_title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+    {% endif %}
+  </h1>
+  
+    <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+    <p class="page__lead">{{ post_excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+  {% include post__meta.html post_read_time=recent_post_read_time post_show_date=recent_post_show_date post_date=recent_post_date post_words_per_minute=recent_post_words_per_minute post_content=recent_post_content %}
+  
+  
+  
+  {% if page.header.cta_url %}
+    <p><a href="{{ page.header.cta_url | relative_url }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+  {% endif %}
+    <p>
+      <a href="{{ post_link | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+    
+  
+</div>
+  {% elsif page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         {% if paginator and site.paginate_show_page_num %}

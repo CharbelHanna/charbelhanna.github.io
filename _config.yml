@@ -52,7 +52,11 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
-  - jekyll-include-cache 
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji 
 
 # set post defaults
 defaults:
@@ -76,7 +80,7 @@ defaults:
       layout: single
       author_profile: true
       header: 
-        overlay_image: /assets/images/7.jpg
+        #overlay_image: /assets/images/7.jpg
 
 logo: "assets/images/zhs-bigger.jpg"
 masthead_title: "Open your eyes!"
