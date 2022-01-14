@@ -3,6 +3,8 @@ main:
     url: /
   - title: "ABOUT"
     url: /about/
+  - title: "TERMS"
+    url: /terms/  
 
   
   
