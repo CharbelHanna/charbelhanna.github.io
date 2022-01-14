@@ -80,7 +80,7 @@ defaults:
       layout: single
       author_profile: true
       header: 
-        overlay_image: /assets/images/Header.jpg 
+        overlay_image: /assets/images/header.jpg  
 
 logo: "assets/images/zhs-bigger.jpg"
 masthead_title: "Open your eyes!"
