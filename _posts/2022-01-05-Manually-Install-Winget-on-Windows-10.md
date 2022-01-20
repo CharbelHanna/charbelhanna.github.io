@@ -1,7 +1,6 @@
 ---
 title:  "Manually Install Winget on Windows 10"
 excerpt: "Bypass installations restrictions..."
-categories: Tips and Tricks
 author_profile: true
 author: komo
 layout: single
@@ -10,9 +9,9 @@ show_date: true
 read_time: true
 words_per_minute: 200
 header:
-  teaser: assets/images/wingetimage4.png
-  overlay_image: assets/images/wingetimage4.png
-  overlay_filter: 1.0
+  teaser: /assets/images/wingetimage4.png
+  overlay_image: /assets/images/wingetimage4.png
+  overlay_filter: 0.5
 
 ---
 # Manually install winget on windows 10

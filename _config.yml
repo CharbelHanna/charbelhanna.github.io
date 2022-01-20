@@ -82,7 +82,7 @@ defaults:
       header: 
         overlay_image: /assets/images/8.jpg  
 
-logo: "assets/images/zhs-bigger.jpg"
+logo: "/assets/images/zhs-bigger.jpg"
 masthead_title: "Open your eyes!"
 search: true
 
