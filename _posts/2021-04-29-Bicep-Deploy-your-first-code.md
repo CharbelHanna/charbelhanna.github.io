@@ -1,6 +1,6 @@
 ---
 title:  Azure Bicep - New Generation ARM Templates
-excerpt: Part 2 - Azure Bicep - Deploy Your First Code
+excerpt: Part 2 - Deploy Your First Code
 categories: Azure
 author_profile: true
 author: komo

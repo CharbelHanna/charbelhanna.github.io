@@ -1,11 +1,12 @@
 ---
 title:  "Azure Bicep - New Generation ARM Templates"
-excerpt: "Part 1 - Azure Bicep - Introduction"
+excerpt: "Part 1 - Introduction"
 categories: Azure
 author_profile: true
 author: komo
 layout: single
-classes: wide
+toc: true
+toc_sticky: true
 show_date: true
 read_time: true
 header:
