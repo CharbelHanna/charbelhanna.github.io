@@ -97,4 +97,4 @@ For the best authoring experience, Bicep language service can be used which is p
 That was the first part of the Bicep series in which we introduced Bicep, how it works and what is required to start using it in your Azure deployments.
 Stay tuned for Part two where we are going to get your hands dirty deploying Bicep
 
-[Part 2 - Azure Bicep - Deploy your Fist code](2021-04-29-post-Bicep-Deploy-your-first-code.md)
+
