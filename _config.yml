@@ -31,7 +31,21 @@ logo: "/assets/images/zhs-bigger.jpg"
 masthead_title: "Open your eyes!"
 search: true
 
-#Comments settings
+# twitter cards
+twitter:
+  username: zerohoursleep
+
+#include social profile in search
+social:
+  type:  Person # Person or Organization (defaults to Person)
+  name:  Charel HANNA # If the user or organization name differs from the site's name
+  links:
+    - "https://www.linkedin.com/in/hannacharbel/"
+    - "https://twitter.com/charbelh"
+    - "https://www.instagram/charbekhanna"  
+    - "https://www.facebook.com/charbel.hanna1"
+
+#Comments system settings
 repository: # GitHub username/repo-name e.g. "charbelhanna/charbelhanna.github.io"
 comments:
   provider: "utterances"
@@ -40,6 +54,23 @@ comments:
     issue-term: "pathname" 
     label: "comment"  
 
+# footer links
+
+footer:
+  links:
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"  # fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/hannacharbel/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/charbelh"
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/charbelhanna"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram/charbekhanna"
+    
 # Build settings
 
 # theme settings
