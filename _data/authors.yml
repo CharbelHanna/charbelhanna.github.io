@@ -3,6 +3,7 @@ komo:
   name        : "Charbel Hanna"
   bio         : "Experienced Cloud Architect in a serious relationship with the cloud."
   avatar      : "assets/images/avatar.jpg"
+  location:   "Paris, France"
   links:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"

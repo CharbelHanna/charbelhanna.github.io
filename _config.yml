@@ -22,9 +22,9 @@ title: Zero Hour Sleep
 subtitle:
 email: charbel_hanna@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  open your eyes!
+  a blog dedicted for sharing my knowledge and experience on azure
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://zerohoursleep.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Charbelh
 github_username:  charbelhanna
 logo: "/assets/images/zhs-bigger.jpg"
@@ -81,6 +81,7 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache
+  - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -108,7 +109,8 @@ defaults:
       layout: single
       author_profile: true
       header: 
-        overlay_image: /assets/images/8.jpg  
+        overlay_image: /assets/images/8.jpg
+        overlay_filter: 0.5
 
 
 
