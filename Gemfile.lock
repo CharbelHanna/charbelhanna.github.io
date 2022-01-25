@@ -285,6 +285,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-remote-theme (~> 0.4.3)
   jekyll-seo-tag
+  jekyll-sitemap
   jemoji
   tzinfo (~> 1.2)
   tzinfo-data

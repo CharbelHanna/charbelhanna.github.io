@@ -18,6 +18,7 @@ gem "jekyll-remote-theme" , "~> 0.4.3"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
   gem "jekyll-include-cache"
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-paginate"
